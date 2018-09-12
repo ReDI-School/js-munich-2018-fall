@@ -1,0 +1,318 @@
+<html>
+
+<head>
+    <title>ReDI.js 3</title>
+    <link rel="stylesheet" href="../../reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="../../reveal.js/css/theme/white.css">
+    <link rel="stylesheet" href="../../reveal.js/lib/css/zenburn.css">
+    <link rel="JavaScript" href="../../reveal.js/plugin/markdown/marked.js">
+    <link rel="JavaScript" href="../../reveal.js/plugin/markdown/markdown.js">
+    <style>
+        .reveal pre {
+            margin: 0;
+        }
+        
+        .monospace {
+            font-family: monospace !important;
+        }
+        
+        .illustration {
+            border: 0px
+        }
+        
+        .reveal li {
+            margin-bottom: 0.5em;
+        }
+        
+        .reveal pre {
+            width: 100%;
+        }
+        
+        .reveal pre code {
+            cursor: pointer;
+        }
+        
+        .reveal li pre {
+            width: fit-content;
+        }
+        
+        .emphasis {
+            color: orange;
+            font-weight: bold;
+        }
+        
+        .logo {
+            position: fixed;
+            /* Sit on top of the page content */
+            z-index: 2;
+            /* Specify a stack order in case you're using a different order for other elements */
+        }
+    </style>
+</head>
+
+<body>
+    <a href="https://www.redi-school.org/"><img src="../../redi-school-logo.jpg" class="logo" /></a>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>Intro to JavaScript</h1>
+                <h3>Lesson 3</h3>
+            </section>
+            <section>
+                <h2>Recap:</h2>
+                <h1>what is a function?</h1>
+            </section>
+            <section>
+                <p><span class="emphasis">arguments</span> are between the () seperated by ","</p>
+                <pre><code>
+	function showDistance(speed, time){
+		alert(speed * time);
+	}
+	showDistance(56,7);
+					</code></pre>
+            </section>
+            <section>
+                <p>let's try to change something</p>
+                <div class="fragment">
+                    <p>now we use <span class="emphasis">return</span> inside the function</p>
+                    <pre><code>
+	function showDistance(speed, time){
+		return (speed * time);
+	}
+	showDistance(56,7);
+					</code></pre>
+                </div>
+            </section>
+            <section>
+                <h1>why?</h1>
+            </section>
+            <section>
+                <p>we want to calculate the distance between multiple points</p>
+                <pre class="fragment"><code>
+	let total_distance = 0;
+	
+	function showDistance(speed, time){
+		return (speed * time);
+	}
+
+	total_distance = total_distance + showDistance(56,7);
+	total_distance = total_distance + showDistance(42,8);
+	total_distance = total_distance + showDistance(37,2);
+	total_distance = total_distance + showDistance(67,5);
+
+	alert("you run for " + total_distance + " metres");
+					</code></pre>
+            </section>
+
+            <section>
+                <p>Sometimes we need to perform different actions based on a condition.</p>
+                <p class="fragment">How can we do that?</p>
+                <p class="fragment">with the statement</p>
+                <h1 class="fragment">IF</h1>
+            </section>
+
+            <section>
+                <p>let's try it!</p>
+                <pre class="fragment"><code>
+	let year = prompt("When Netscape was published?");
+
+	if (year == 1995) {
+		alert("You are right!");
+	}
+						</code></pre>
+            </section>
+
+            <section>
+                <p>The <code>if</code> statement may contain an optional “else” block. It executes when the condition is wrong.</p>
+                <p class="fragment">let's try it!</p>
+                <pre class="fragment"><code>
+	let year = prompt("When Netscape was published?");
+
+	if (year == 1995) {
+		alert("You are right!");
+	} else {
+		alert("Sorry it's wrong");
+	}
+						</code></pre>
+
+            </section>
+
+            <section>
+                <p>Sometimes we’d like to test several variants of a condition. There is an <code>else if</code> clause for that.</p>
+                <p class="fragment">let's try it!</p>
+                <pre class="fragment"><code>
+	let year = prompt("When Netscape was published?");
+
+	if (year < 1995) {
+		alert("Sorry too early....");
+	} else if (year > 1995) {
+		alert("Sorry too late....");
+	} else {
+		alert("You are right!");
+	}
+						</code></pre>
+
+            </section>
+
+
+            <section>
+                <p>As time goes on, the program becomes more and more complex. It becomes necessary to add comments which describe what happens and why.</p>
+                <li class="fragment">One-line comments start with two forward slash characters //</li>
+                <pre class="fragment"><code>
+	// This comment occupies a line of its own
+	alert('Hello');
+
+	alert('World'); // This comment follows the statement
+							</code></pre>
+
+            </section>
+            <section>
+                <li>Multiline comments start with a forward slash and an asterisk /* and end with an asterisk and a forward slash */</li>
+                <pre class="fragment"><code>
+	/* An example with two messagxes.
+	This is a multiline comment.
+	*/
+	alert('Hello');
+	alert('World');
+							</code></pre>
+
+            </section>
+            <section>
+                <li>another very important tool is the function <code>console.log("hello world!");</code></li>
+                <pre class="fragment"><code>
+	console.log("hello world 1!");
+	console.log("hello world 2!");
+	console.log("hello world 3!");
+						</code></pre>
+
+            </section>
+            <section>
+                <p>We often have a need to perform similar actions many times in a row.</p>
+
+                <p class="fragment">For example, when we need to output goods from a list one after another. Or just run the same code for each number from 1 to 10.</p>
+
+                <p class="fragment">Loops are a way to repeat the same part of code multiple times.</p>
+            </section>
+
+            <section>
+                <p>we will use</p>
+                <h1 class="fragment">The “for” loop</h1>
+            </section>
+
+
+            <section>
+                <p>The <code>for</code> loop is the most often used one.</p>
+                <p class="fragment">the syntax is</p>
+                <pre class="fragment"><code>
+	for (begin; condition; step) {
+		// ... loop body ...
+	}
+						</code></pre>
+
+                <p class="fragment">let's try it!</p>
+                <pre class="fragment"><code>
+	for (let i = 0; i < 3; i++) { // shows 0, then 1, then 2
+		alert(i);
+	}
+						</code></pre>
+
+            </section>
+
+
+            <section>
+                <p>another option is </p>
+                <h1 class="fragment">The "while" loop</h1>
+            </section>
+
+
+            <section>
+                <p>While the <code>condition</code> is <code>true</code>, the <code>code</code> from the loop body is executed.</p>
+                <p class="fragment">the syntax is</p>
+                <pre class="fragment"><code>
+	while (condition) {
+		// code
+		// so-called "loop body"
+	}
+						</code></pre>
+
+
+                <p class="fragment">let's try it!</p>
+                <pre class="fragment"><code>
+	let i = 0;
+	while (i < 3) { // shows 0, then 1, then 2
+		alert( i );
+		i++;
+	}
+						</code></pre>
+
+            </section>
+
+            <section>
+                <h3>Dive in:</h3>
+                <ul>
+                    <li>Code a function named <span class="emphasis">MoltiplicationTable</span></li>
+                    <li>Takes 1 argument</li>
+                    <li>and print the moltiplication table for that number</li>
+                    <li>e.g. 2x1=2 2x2=4 2x3=6 2x4=8 etc... until 2x10=20</li>
+                    <li>Don't forget to make the function call.</li>
+                </ul>
+                <pre class="fragment"><code data-trim>
+	function MoltiplicationTable(int1) {
+		console.log("MoltiplicationTable of: " + int1)
+		for (let j = 1; j <= 10; j++) {
+			console.log(int1 + " x " + j + " = " + (int1 * j));
+		}
+	}
+	MoltiplicationTable(2);
+	MoltiplicationTable(5);
+						</code></pre>
+            </section>
+
+            <section>
+                <h3>Homework</h3>
+                <div class="fragment">
+                    <p>ask/prompt to the user "What's your Name?"</p>
+                    <p>ask/prompt to the user "How old are you?"</p>
+                </div>
+                <div class="fragment">
+                    <p>add an alert message when the user have 18 years old</p>
+                    <i>e.g. "Hi Giulio, in 2004 you had 18 years old"</i>
+
+                </div>
+                <div class="fragment">
+                    <p>add alert message only if the user is older than 30</p>
+                    <i>e.g. "Hi Giulio, in xxxx you have more than 30 years old"</i>
+
+                </div>
+                <p class="fragment">PLEASE use the <code>for/while</code> loop</p>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="../../jquery-3.3.1.slim.min.js"></script>
+    <script src="../../reveal.js/lib/js/head.min.js"></script>
+    <script src="../../reveal.js/js/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            history: true,
+            dependencies: [{
+                src: '../../reveal.js/plugin/highlight/highlight.js',
+                async: false,
+                callback: function() {
+                    hljs.initHighlightingOnLoad();
+                }
+            }, ]
+        });
+
+        // Make each code example executable by clicking it:
+        $(document).ready(function() {
+            $('code').click(function(event) {
+                console.info('Click!', $(this).text());
+                eval($(this).text());
+            });
+        });
+    </script>
+</body>
+
+</html>
