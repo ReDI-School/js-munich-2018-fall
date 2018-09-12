@@ -35,10 +35,16 @@
 		.reveal li pre {
 			width: fit-content;
 		}
+
+		.logo {
+			position: fixed; /* Sit on top of the page content */
+			z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+		}
 	</style>
 </head>
 
 <body>
+	<a href="https://www.redi-school.org/"><img src="../../redi-school-logo.jpg" class="logo" /></a>
 	<div class="reveal">
 		<div class="slides">
 			<section>
