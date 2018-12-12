@@ -128,12 +128,16 @@ Solutions [7.2](https://raw.githubusercontent.com/ReDI-School/js-munich-2018-fal
 - Add/Remove item
 - One of the other features
 
+
 # Projects
 
 - [Gobi](https://redi-school.github.io/js-munich-2018-fall/project/gobi)
 - [Moha](https://qooje14.github.io/todo-app-js/)
 - [Mowlid](https://redi-school.github.io/js-munich-2018-fall/project/mowlid)
-- [Peter](https://redi-school.github.io/js-munich-2018-fall/project/peter)
+- [Peter](https://github.com/peterdrock/todo-app)
+- [Kitti](https://tkitti.github.io/todo-project/)
+- [Shaame](https://shaame.github.io/todolistApp/)
 
 # [Demo Day](https://redi-school.github.io/js-munich-2018-fall/demo/)
+
 
