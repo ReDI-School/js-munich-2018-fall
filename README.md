@@ -135,3 +135,5 @@ Solutions [7.2](https://raw.githubusercontent.com/ReDI-School/js-munich-2018-fal
 - [Mowlid](https://redi-school.github.io/js-munich-2018-fall/project/mowlid)
 - [Peter](https://redi-school.github.io/js-munich-2018-fall/project/peter)
 
+# [Demo Day](https://redi-school.github.io/js-munich-2018-fall/demo/)
+
