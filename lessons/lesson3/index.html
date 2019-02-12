@@ -105,79 +105,6 @@
             </section>
 
             <section>
-                <p>Sometimes we need to perform different actions based on a condition.</p>
-                <p class="fragment">How can we do that?</p>
-                <p class="fragment">with the statement</p>
-                <h1 class="fragment">IF</h1>
-            </section>
-
-            <section>
-                <p>let's try it!</p>
-                <pre class="fragment"><code>
-	let year = prompt("When Netscape was published?");
-
-	if (year === 1995) {
-		alert("You are right!");
-	}
-						</code></pre>
-            </section>
-
-            <section>
-                <p>The <code>if</code> statement may contain an optional “else” block. It executes when the condition is wrong.</p>
-                <p class="fragment">let's try it!</p>
-                <pre class="fragment"><code>
-	let year = prompt("When Netscape was published?");
-
-	if (year === 1995) {
-		alert("You are right!");
-	} else {
-		alert("Sorry it's wrong");
-	}
-						</code></pre>
-
-            </section>
-
-            <section>
-                <p>Sometimes we’d like to test several variants of a condition. There is an <code>else if</code> clause for that.</p>
-                <p class="fragment">let's try it!</p>
-                <pre class="fragment"><code>
-	let year = prompt("When Netscape was published?");
-
-	if (year < 1995) {
-		alert("Sorry too early....");
-	} else if (year > 1995) {
-		alert("Sorry too late....");
-	} else {
-		alert("You are right!");
-	}
-						</code></pre>
-
-            </section>
-
-
-            <section>
-                <p>Try it!!</p>
-                <p class="fragment">let's write a function</p>
-                <p class="fragment">with two arguments and check if</p>
-                <p class="fragment">the first number is bigger than the second</p>
-                <pre class="fragment"><code>
-	let first = prompt("insert the first number");
-	let second = prompt("insert the second number");
-	if (first > second) {
-		alert("The first number is bigger : " + first + " > " + second);
-	} else if (second > first) {
-		alert("The second number is bigger : " + second + " > " + first);
-	} else if (second === first) {
-		alert("the two numbers are equal : " +  first + " = " + second);
-	} else {
-		alert("Uhmmm something wrong....");
-	}
-						</code></pre>
-
-            </section>
-
-
-            <section>
                 <p>As time goes on, the program becomes more and more complex. It becomes necessary to add comments which describe what happens and why.</p>
                 <li class="fragment">One-line comments start with two forward slash characters //</li>
                 <pre class="fragment"><code>
@@ -199,46 +126,10 @@
 							</code></pre>
 
             </section>
-            <section>
-                <li>another very important tool is the function <code>console.log("hello world!");</code></li>
-                <pre class="fragment"><code>
-	console.log("hello world 1!");
-	console.log("hello world 2!");
-	console.log("hello world 3!");
-						</code></pre>
 
-            </section>
-            <section>
-                <p>We often have a need to perform similar actions many times in a row.</p>
-
-                <p class="fragment">For example, when we need to output goods from a list one after another. Or just run the same code for each number from 1 to 10.</p>
-
-                <p class="fragment">Loops are a way to repeat the same part of code multiple times.</p>
-            </section>
-
-            <section>
-                <p>we will use</p>
-                <h1 class="fragment">The “for” loop</h1>
-            </section>
-
-
-            <section>
-                <p>The <code>for</code> loop is the most often used one.</p>
-                <p class="fragment">the syntax is</p>
-                <pre class="fragment"><code>
-	for (begin; condition; step) {
-		// ... loop body ...
-	}</code></pre>
-
-                <p class="fragment">let's try it!</p>
-                <pre class="fragment"><code>
-	for (let i = 0; i < 3; i++) { // shows 0, then 1, then 2
-		alert(i);
-	}</code></pre>
-
-            </section>
-
-
+            <!-- this lesson needs to be rewritten. It was way too much and way too wordy. 
+                Students complained about not understanding anything.-->
+                
         </div>
     </div>
 
